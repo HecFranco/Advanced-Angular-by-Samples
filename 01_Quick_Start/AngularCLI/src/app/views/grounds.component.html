@@ -1,0 +1,9 @@
+<h1>{{title}}</h1>
+<ol>
+  <li>Surface : {{surface}} m2</li>
+  <li>Type of Vegetation : {{typeOfVegetation}}</li>
+  <li>
+    <span *ngIf="open == true">Open</span>
+    <span *ngIf="open != true">Close</span>
+  </li>
+</ol>
