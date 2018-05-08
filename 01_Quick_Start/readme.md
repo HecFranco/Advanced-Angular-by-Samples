@@ -3,10 +3,10 @@
 In this sample we will create a Advanced project using **Angular CLI**.
 
 Summary steps:
-- [Install Angular CLI Global](#Install-Angular-CLI-Global)
-- [Configuration Angular CLI](#Configuration-Angular-CLI)
-- [First Component](#First-Component)
-- [Second Component](#Second-Component)
+- [Install Angular CLI Global](#install-angular-cli-global)
+- [Configuration Angular CLI](#configuration-angular-cli)
+- [First Component](#first-component)
+- [Second Component](#second-component)
 
 ## Prerequisites
 
