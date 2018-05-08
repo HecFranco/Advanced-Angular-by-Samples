@@ -23,3 +23,15 @@ In this sample we will learn to use the hook of the life cycle of the component 
 # [05_Hook_OnInit](./05_Hook_OnInit/)
 
 In this sample we will learn to use the hook of the life cycle of the component `OnInit()`.
+
+# [06_Hook_DoCheck](./06_Hook_DoCheck/)
+
+In this sample we will learn to use the hook of the life cycle of the component `DoCheck()`.
+
+# [07_Hook_OnDestroy](./07_Hook_OnDestroy/)
+
+In this sample we will learn to use the hook of the life cycle of the component `OnDestroy()`.
+
+# [08_Routing](./08_Routing/)
+
+In this sample we will learn to use the **routing** in Angular.
