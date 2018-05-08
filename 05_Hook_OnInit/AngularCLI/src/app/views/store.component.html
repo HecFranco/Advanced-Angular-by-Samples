@@ -1,0 +1,28 @@
+<h1>{{title}}</h1>
+<hr/> Father:
+<ul>
+  <li>Rose Shirt</li>
+  <li>Black Hat</li>
+</ul>
+<p>
+  Grounds Name:
+  <input type="text" [(ngModel)]="groundsName" (keyup)="showName()" />
+</p>
+<p>
+  Result : {{groundsName}}
+</p>
+<div *ngIf="myPark">
+    <h4>Data of My Park</h4>
+    <ol >
+        <li>{{myPark.name}}</li>
+        <li>{{myPark.surface}}</li>
+        <li>{{myPark.typeOfVegetation}}</li>
+        <li>{{myPark.open}}</li>
+      </ol>
+</div> 
+<hr/>
+<p *ngIf="groundsName">
+  Son:
+  <app-grounds [name]="groundsName" [square_meter]=300 (giveMeData)="showGroundsData($event)">
+  </app-grounds>
+</p>

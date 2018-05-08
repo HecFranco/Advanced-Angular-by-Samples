@@ -19,3 +19,7 @@ In this sample we will learn to use the inputs to pass information from a child 
 # [04_Hook_OnChange](./04_Hook_OnChange/)
 
 In this sample we will learn to use the hook of the life cycle of the component `OnChange()`.
+
+# [05_Hook_OnInit](./05_Hook_OnInit/)
+
+In this sample we will learn to use the hook of the life cycle of the component `OnInit()`.
