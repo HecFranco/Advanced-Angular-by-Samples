@@ -86,7 +86,7 @@ Create first component **Store** with the command `ng generate component store -
 
 _[src/app/components/store.components.ts](./src/app/components/store.components.ts)_
 ```diff
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-store',
@@ -102,9 +102,6 @@ export class StoreComponent implements OnInit {
 ++ constructor() { 
 ++  this.title = 'This is the Store';
 ++ }
-
-  ngOnInit() {
-  }
 
 }
 ```
@@ -170,7 +167,7 @@ Create first component **Store** with the command `ng generate component grounds
 
 _[src/app/components/grounds.components.ts](./src/app/components/grounds.components.ts)_
 ```diff
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-grounds',
@@ -192,9 +189,6 @@ export class GroundsComponent implements OnInit {
 ++  this.typeOfVegetation = 'High';
 ++  this.open = true;
 ++ }
-
-  ngOnInit() {
-  }
 
 }
 ```

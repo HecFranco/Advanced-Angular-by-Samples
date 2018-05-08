@@ -1,0 +1,12 @@
+<h1>{{title}}</h1>
+<h1>Result of input {{name}}</h1>
+<ol>
+  <li>Name : {{name}}</li>
+  <li>Surface : {{surface}} m2</li>
+  <li>Type of Vegetation : {{typeOfVegetation}}</li>
+  <li>
+    <span *ngIf="open == true">Open</span>
+    <span *ngIf="open != true">Close</span>
+  </li>
+</ol>
+<button (click)="issueEvent($event)">Show the father</button>
