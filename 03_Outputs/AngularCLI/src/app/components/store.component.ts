@@ -1,20 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-store',
   templateUrl: '../views/store.component.html',
   styleUrls: ['../styles/store.component.scss']
 })
-export class StoreComponent implements OnInit {
+export class StoreComponent {
   public title;
   public groundsName: string;
   public myPark;
 
   constructor() {
     this.title = 'This is the Store';
-  }
-
-  ngOnInit() {
   }
 
   showName() {

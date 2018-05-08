@@ -2,6 +2,8 @@
 
 In this sample We will continue the previous example and learn to use inputs.
 
+We will take as a starting point sample [01_Quick_Start](../01_Quick_Start/AngularCLI/).
+
 ## Prerequisites
 
 Install [Node.js and npm](https://nodejs.org/en/) if they are not already installed on your computer.
@@ -16,11 +18,17 @@ Install [Angular CLI Global](https://cli.angular.io/) using `npm install -global
 
 ## Steps to build it
 
-> We will relocate the `<app-grounds></app-grounds>` component as the `<app-store></app-store>` child.
+1. Copy the content from [01_Quick_Start](../01_Quick_Start/AngularCLI/) and execute:
+
+```bash
+npm install
+```
 
 > To understand the behavior of the demo, start the server in the console using the command `ng serve` and acecde to [http://localhost:4200/](http://localhost:4200/) Also open the developer tools option **console**.
 
-1. We removed the `<app-grounds></app-grounds>` component from view of [src/app/app.component.html](./AngularCLI/src/app/app.component.html).
+> We will relocate the `<app-grounds></app-grounds>` component as the `<app-store></app-store>` child.
+
+2. We removed the `<app-grounds></app-grounds>` component from view of [src/app/app.component.html](./AngularCLI/src/app/app.component.html).
 
 _[src/app/app.component.html](./AngularCLI/src/app/app.component.html)_
 ```diff
@@ -35,7 +43,7 @@ _[src/app/app.component.html](./AngularCLI/src/app/app.component.html)_
 <router-outlet></router-outlet>
 ```
 
-2. We include in the [src/app/components/store.components.ts](./src/app/components/store.components.ts) a variable that receives the name of the `<app-grounds></app-grounds>` component, `public groundsName: string;`. We will also add a method that shows that data in console, `showName(){}`.
+3. We include in the [src/app/components/store.components.ts](./src/app/components/store.components.ts) a variable that receives the name of the `<app-grounds></app-grounds>` component, `public groundsName: string;`. We will also add a method that shows that data in console, `showName(){}`.
 
 _[src/app/components/store.components.ts](./src/app/components/store.components.ts)_
 ```diff
@@ -60,7 +68,7 @@ export class StoreComponent implements OnInit {
 }
 ```
 
-3. We will modify the [src/app/views/store.components.html](./src/app/views/store.components.html) view to include your `<app-grounds></app-grounds>` child and also include an input that receives the new name, `[(ngModel)]="groundsName"` and execute the `showName()` function each time the key is raised (`(keyup)=""`).
+4. We will modify the [src/app/views/store.components.html](./src/app/views/store.components.html) view to include your `<app-grounds></app-grounds>` child and also include an input that receives the new name, `[(ngModel)]="groundsName"` and execute the `showName()` function each time the key is raised (`(keyup)=""`).
 
 _[src/app/views/store.components.html](./src/app/views/store.components.html)_
 ```diff
@@ -79,7 +87,7 @@ _[src/app/views/store.components.html](./src/app/views/store.components.html)_
 ++ <app-grounds></app-grounds>
 ```
 
-4. We add the option to show the captured data.
+5. We add the option to show the captured data.
 
 _[src/app/views/store.components.html](./src/app/views/store.components.html)_
 ```diff
@@ -102,7 +110,7 @@ Son:
 <app-grounds></app-grounds>
 ```
 
-5. We add the `input` functionality of the angular core, and the variable with the decorator `@Input()`, `@Input() name: string;`, which will receive the data. In addition we will give an initial value to that variable, `this.name = 'Example of Name using input - Value initial';`.
+6. We add the `input` functionality of the angular core, and the variable with the decorator `@Input()`, `@Input() name: string;`, which will receive the data. In addition we will give an initial value to that variable, `this.name = 'Example of Name using input - Value initial';`.
 
 _[src/app/components/grounds.components.ts](./src/app/components/grounds.components.ts)_
 ```diff
@@ -132,7 +140,7 @@ export class GroundsComponent implements OnInit {
 }
 ```
 
-6. The next step will be to add the option to visualize the entry in the son of the new data.
+7. The next step will be to add the option to visualize the entry in the son of the new data.
 
 _[src/app/views/grounds.components.html](./src/app/views/grounds.components.html)_
 ```diff
@@ -170,7 +178,7 @@ Son:
 ++ <app-grounds [name]="'Result of example using input'"></app-grounds>
 ```
 
-7. And indicate the input variable in the component.
+8. And indicate the input variable in the component.
 
 _[src/app/views/store.components.html](./src/app/views/store.components.html)_
 ```diff
@@ -194,7 +202,7 @@ Son:
 ++ <app-grounds [name]="groundsName"></app-grounds>
 ```
 
-8. We improved the example by adding the option to only show the data when it is created.
+9. We improved the example by adding the option to only show the data when it is created.
 
 _[src/app/views/store.components.html](./src/app/views/store.components.html)_
 ```diff

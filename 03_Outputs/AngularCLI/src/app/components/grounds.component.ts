@@ -1,11 +1,11 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-grounds',
   templateUrl: '../views/grounds.component.html',
   styleUrls: ['../styles/grounds.component.scss']
 })
-export class GroundsComponent implements OnInit {
+export class GroundsComponent {
   public title: string;
   @Input() name: string;
   @Input('square_meter') surface: number;
@@ -20,9 +20,6 @@ export class GroundsComponent implements OnInit {
     this.surface = 200;
     this.typeOfVegetation = 'High';
     this.open = true;
-  }
-
-  ngOnInit() {
   }
 
   issueEvent() {
